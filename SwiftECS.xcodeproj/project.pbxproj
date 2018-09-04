@@ -10,6 +10,17 @@
 		731E6E70213EA4CE008FB25A /* SwiftECS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 731E6E66213EA4CE008FB25A /* SwiftECS.framework */; };
 		731E6E75213EA4CE008FB25A /* SwiftECSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E74213EA4CE008FB25A /* SwiftECSTests.swift */; };
 		731E6E77213EA4CE008FB25A /* SwiftECS.h in Headers */ = {isa = PBXBuildFile; fileRef = 731E6E69213EA4CE008FB25A /* SwiftECS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		731E6E86213EB1D2008FB25A /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E80213EB1D1008FB25A /* System.swift */; };
+		731E6E87213EB1D2008FB25A /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E81213EB1D2008FB25A /* Component.swift */; };
+		731E6E88213EB1D2008FB25A /* NodeComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E82213EB1D2008FB25A /* NodeComponent.swift */; };
+		731E6E89213EB1D2008FB25A /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E83213EB1D2008FB25A /* Entity.swift */; };
+		731E6E8A213EB1D2008FB25A /* EntityScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E84213EB1D2008FB25A /* EntityScene.swift */; };
+		731E6E8B213EB1D2008FB25A /* EntityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E85213EB1D2008FB25A /* EntityBuilder.swift */; };
+		731E6E91213EB1E8008FB25A /* ComponentContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8C213EB1E7008FB25A /* ComponentContainerTests.swift */; };
+		731E6E92213EB1E8008FB25A /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8D213EB1E7008FB25A /* Support.swift */; };
+		731E6E93213EB1E8008FB25A /* EntityBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8E213EB1E8008FB25A /* EntityBuilderTests.swift */; };
+		731E6E94213EB1E8008FB25A /* EntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8F213EB1E8008FB25A /* EntityTests.swift */; };
+		731E6E95213EB1E8008FB25A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E90213EB1E8008FB25A /* TestExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +40,17 @@
 		731E6E6F213EA4CE008FB25A /* SwiftECSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftECSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		731E6E74213EA4CE008FB25A /* SwiftECSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftECSTests.swift; sourceTree = "<group>"; };
 		731E6E76213EA4CE008FB25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		731E6E80213EB1D1008FB25A /* System.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		731E6E81213EB1D2008FB25A /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
+		731E6E82213EB1D2008FB25A /* NodeComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NodeComponent.swift; sourceTree = "<group>"; };
+		731E6E83213EB1D2008FB25A /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		731E6E84213EB1D2008FB25A /* EntityScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityScene.swift; sourceTree = "<group>"; };
+		731E6E85213EB1D2008FB25A /* EntityBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityBuilder.swift; sourceTree = "<group>"; };
+		731E6E8C213EB1E7008FB25A /* ComponentContainerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentContainerTests.swift; sourceTree = "<group>"; };
+		731E6E8D213EB1E7008FB25A /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		731E6E8E213EB1E8008FB25A /* EntityBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityBuilderTests.swift; sourceTree = "<group>"; };
+		731E6E8F213EB1E8008FB25A /* EntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityTests.swift; sourceTree = "<group>"; };
+		731E6E90213EB1E8008FB25A /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +93,12 @@
 		731E6E68213EA4CE008FB25A /* SwiftECS */ = {
 			isa = PBXGroup;
 			children = (
+				731E6E81213EB1D2008FB25A /* Component.swift */,
+				731E6E83213EB1D2008FB25A /* Entity.swift */,
+				731E6E85213EB1D2008FB25A /* EntityBuilder.swift */,
+				731E6E84213EB1D2008FB25A /* EntityScene.swift */,
+				731E6E82213EB1D2008FB25A /* NodeComponent.swift */,
+				731E6E80213EB1D1008FB25A /* System.swift */,
 				731E6E69213EA4CE008FB25A /* SwiftECS.h */,
 				731E6E6A213EA4CE008FB25A /* Info.plist */,
 			);
@@ -80,6 +108,11 @@
 		731E6E73213EA4CE008FB25A /* SwiftECSTests */ = {
 			isa = PBXGroup;
 			children = (
+				731E6E8C213EB1E7008FB25A /* ComponentContainerTests.swift */,
+				731E6E8E213EB1E8008FB25A /* EntityBuilderTests.swift */,
+				731E6E8F213EB1E8008FB25A /* EntityTests.swift */,
+				731E6E8D213EB1E7008FB25A /* Support.swift */,
+				731E6E90213EB1E8008FB25A /* TestExtensions.swift */,
 				731E6E74213EA4CE008FB25A /* SwiftECSTests.swift */,
 				731E6E76213EA4CE008FB25A /* Info.plist */,
 			);
@@ -108,6 +141,7 @@
 				731E6E62213EA4CE008FB25A /* Sources */,
 				731E6E63213EA4CE008FB25A /* Frameworks */,
 				731E6E64213EA4CE008FB25A /* Resources */,
+				731E6E96213EB243008FB25A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -148,6 +182,7 @@
 				TargetAttributes = {
 					731E6E65213EA4CE008FB25A = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					731E6E6E213EA4CE008FB25A = {
 						CreatedOnToolsVersion = 10.0;
@@ -189,11 +224,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		731E6E96213EB243008FB25A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		731E6E62213EA4CE008FB25A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731E6E8A213EB1D2008FB25A /* EntityScene.swift in Sources */,
+				731E6E89213EB1D2008FB25A /* Entity.swift in Sources */,
+				731E6E86213EB1D2008FB25A /* System.swift in Sources */,
+				731E6E87213EB1D2008FB25A /* Component.swift in Sources */,
+				731E6E8B213EB1D2008FB25A /* EntityBuilder.swift in Sources */,
+				731E6E88213EB1D2008FB25A /* NodeComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +262,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				731E6E94213EB1E8008FB25A /* EntityTests.swift in Sources */,
+				731E6E95213EB1E8008FB25A /* TestExtensions.swift in Sources */,
 				731E6E75213EA4CE008FB25A /* SwiftECSTests.swift in Sources */,
+				731E6E91213EB1E8008FB25A /* ComponentContainerTests.swift in Sources */,
+				731E6E93213EB1E8008FB25A /* EntityBuilderTests.swift in Sources */,
+				731E6E92213EB1E8008FB25A /* Support.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +407,8 @@
 		731E6E7B213EA4CE008FB25A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -358,6 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.blueropesoftware.SwiftECS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +435,8 @@
 		731E6E7C213EA4CE008FB25A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -391,6 +462,7 @@
 		731E6E7E213EA4CE008FB25A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9LM5Y58FM;
 				INFOPLIST_FILE = SwiftECSTests/Info.plist;
@@ -409,6 +481,7 @@
 		731E6E7F213EA4CE008FB25A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B9LM5Y58FM;
 				INFOPLIST_FILE = SwiftECSTests/Info.plist;
