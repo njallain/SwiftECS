@@ -9,7 +9,7 @@
 import Foundation
 import SpriteKit
 
-protocol EntityScene {
+public protocol EntityScene {
 	var builder: EntityBuilder {get}
 	func update(_ currentTime: TimeInterval)
 }

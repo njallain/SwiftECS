@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol Component {
+public protocol Component {
 }
 
 /***
  * A component container is used to associate entities to a single component type.
  * The container can be queried for the component of any entity
  */
-protocol ComponentContainer: EntityContainer {
+public protocol ComponentContainer: EntityContainer {
 	associatedtype ComponentType where ComponentType: Component
 	/// Returns the component associated with the entity if it exists
 	func get(entity: Entity) -> ComponentType?
@@ -28,19 +28,19 @@ protocol ComponentContainer: EntityContainer {
 /***
  * A component container that is expects to have a component associated to the majority of entities.
  */
-class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
+public class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
 
 	/// Creates the container with a default capacity reserved
-	convenience init() {
+	public convenience init() {
 		self.init(size: 256)
 	}
 	/// Creates the container with space allocated for size entities.
 	/// Ideally this is the maximum number of entities in the game
-	init(size: Int) {
+	public init(size: Int) {
 		slots.reserveCapacity(size)
 	}
 
-	func get(entity: Entity) -> ComponentType? {
+	public func get(entity: Entity) -> ComponentType? {
 		guard entity.id < slots.count else {
 			return nil
 		}
@@ -52,7 +52,7 @@ class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
 			return nil
 		}
 	}
-	func update(entity: Entity, component: ComponentType) {
+	public func update(entity: Entity, component: ComponentType) {
 		if entity.id < slots.count {
 		} else {
 			slots.reserveCapacity(entity.id * 2)
@@ -63,11 +63,11 @@ class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
 		slots[entity.id] = .full(component)
 	}
 
-	var entities: AnySequence<(Entity, ComponentType)> {
+	public var entities: AnySequence<(Entity, ComponentType)> {
 		return AnySequence(slots.enumerated().filter({$0.1.isFull}).map({ return (Entity(id: $0.0), $0.1.component!) }))
 	}
 
-	func remove(entity: Entity) {
+	public func remove(entity: Entity) {
 		if entity.id == slots.count-1 {
 			slots.removeLast()
 		} else if entity.id < slots.count {
@@ -75,7 +75,7 @@ class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
 		}
 	}
 
-	func removeAll() {
+	public func removeAll() {
 		for ndx in 0..<slots.count {
 			slots[ndx] = .empty
 		}
@@ -107,32 +107,32 @@ class DenseComponentContainer<ComponentType: Component> :  ComponentContainer {
 /***
  * A component container that is expects to have a component associated to a minority of entities.
  */
-class SparseComponentContainer<ComponentType: Component> : ComponentContainer {
+public class SparseComponentContainer<ComponentType: Component> : ComponentContainer {
 	private var components = [Entity: ComponentType]()
-	init() {
+	public init() {
 	}
-	func get(entity: Entity) -> ComponentType? {
+	public func get(entity: Entity) -> ComponentType? {
 		return components[entity]
 	}
-	func update(entity: Entity, component: ComponentType) {
+	public func update(entity: Entity, component: ComponentType) {
 		components[entity] = component
 	}
-	var entities: AnySequence<(Entity, ComponentType)> {
+	public var entities: AnySequence<(Entity, ComponentType)> {
 		return AnySequence(components.map({return ($0.key, $0.value)}))
 	}
-	func remove(entity: Entity) {
+	public func remove(entity: Entity) {
 		components.removeValue(forKey: entity)
 	}
-	func removeAll() {
+	public func removeAll() {
 		components.removeAll()
 	}
 }
 
-enum ContainerIterationAction: Equatable {
+public enum ContainerIterationAction: Equatable {
 	case `continue`
 	case `break`
 }
-extension ComponentContainer {
+public extension ComponentContainer {
 	func forEach(action: (Entity, ComponentType) -> Void) {
 		for (entity, component) in entities {
 			action(entity, component)

@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol System {
+public protocol System {
 	associatedtype SceneType: EntityScene
 }

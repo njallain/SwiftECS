@@ -8,13 +8,13 @@
 
 import Foundation
 
-struct Entity: Hashable {
+public struct Entity: Hashable {
 	// swiftlint:disable identifier_name
 	let id: Int
 	// swiftlint:enable identifier_name
 }
 
-extension Entity {
+public extension Entity {
 	func get<ComponentListType1: ComponentContainer, ComponentListType2: ComponentContainer>(
 		components list1: ComponentListType1,
 		_ list2: ComponentListType2) -> (ComponentListType1.ComponentType, ComponentListType2.ComponentType)? {

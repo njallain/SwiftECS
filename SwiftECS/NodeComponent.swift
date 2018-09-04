@@ -9,22 +9,22 @@
 import Foundation
 import SpriteKit
 
-typealias KitNode = SKNode
+public typealias KitNode = SKNode
 
 extension KitNode: Component {
 }
 
-protocol NodeComponents {
+public protocol NodeComponents {
 	associatedtype NodeListType: ComponentContainer where NodeListType.ComponentType == KitNode
 	var nodes: NodeListType {get}
 }
 
-struct EntityNode<NodeType: KitNode> {
-	let entity: Entity
-	let node: NodeType
+public struct EntityNode<NodeType: KitNode> {
+	public let entity: Entity
+	public let node: NodeType
 
 	@discardableResult
-	func add<ComponentListType: ComponentContainer>(
+	public func add<ComponentListType: ComponentContainer>(
 		_ list: ComponentListType,
 		_ component: ComponentListType.ComponentType) -> EntityNode<NodeType> {
 		list.update(entity: self.entity, component: component)
@@ -32,7 +32,7 @@ struct EntityNode<NodeType: KitNode> {
 	}
 }
 
-extension EntityBuilder {
+public extension EntityBuilder {
 	@discardableResult
 	func build<NodeType: KitNode, ComponentListType: ComponentContainer>(
 		node: NodeType,
