@@ -14,7 +14,7 @@ struct Named: Component, Equatable {
 	let name: String
 }
 
-struct Tagged: Component, Equatable {
+struct Tagged: Component, EntityTag {
 	let tag: String
 }
 

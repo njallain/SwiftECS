@@ -21,6 +21,8 @@
 		731E6E93213EB1E8008FB25A /* EntityBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8E213EB1E8008FB25A /* EntityBuilderTests.swift */; };
 		731E6E94213EB1E8008FB25A /* EntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E8F213EB1E8008FB25A /* EntityTests.swift */; };
 		731E6E95213EB1E8008FB25A /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E6E90213EB1E8008FB25A /* TestExtensions.swift */; };
+		7366396B2147078600E75A1F /* EntityTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366396A2147078600E75A1F /* EntityTag.swift */; };
+		7366396D2147160B00E75A1F /* TagContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7366396C2147160B00E75A1F /* TagContainerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		731E6E8E213EB1E8008FB25A /* EntityBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityBuilderTests.swift; sourceTree = "<group>"; };
 		731E6E8F213EB1E8008FB25A /* EntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityTests.swift; sourceTree = "<group>"; };
 		731E6E90213EB1E8008FB25A /* TestExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		7366396A2147078600E75A1F /* EntityTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityTag.swift; sourceTree = "<group>"; };
+		7366396C2147160B00E75A1F /* TagContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagContainerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 				731E6E80213EB1D1008FB25A /* System.swift */,
 				731E6E69213EA4CE008FB25A /* SwiftECS.h */,
 				731E6E6A213EA4CE008FB25A /* Info.plist */,
+				7366396A2147078600E75A1F /* EntityTag.swift */,
 			);
 			path = SwiftECS;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 				731E6E90213EB1E8008FB25A /* TestExtensions.swift */,
 				731E6E74213EA4CE008FB25A /* SwiftECSTests.swift */,
 				731E6E76213EA4CE008FB25A /* Info.plist */,
+				7366396C2147160B00E75A1F /* TagContainerTests.swift */,
 			);
 			path = SwiftECSTests;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				731E6E8A213EB1D2008FB25A /* EntityScene.swift in Sources */,
 				731E6E89213EB1D2008FB25A /* Entity.swift in Sources */,
+				7366396B2147078600E75A1F /* EntityTag.swift in Sources */,
 				731E6E86213EB1D2008FB25A /* System.swift in Sources */,
 				731E6E87213EB1D2008FB25A /* Component.swift in Sources */,
 				731E6E8B213EB1D2008FB25A /* EntityBuilder.swift in Sources */,
@@ -264,6 +271,7 @@
 			files = (
 				731E6E94213EB1E8008FB25A /* EntityTests.swift in Sources */,
 				731E6E95213EB1E8008FB25A /* TestExtensions.swift in Sources */,
+				7366396D2147160B00E75A1F /* TagContainerTests.swift in Sources */,
 				731E6E75213EA4CE008FB25A /* SwiftECSTests.swift in Sources */,
 				731E6E91213EB1E8008FB25A /* ComponentContainerTests.swift in Sources */,
 				731E6E93213EB1E8008FB25A /* EntityBuilderTests.swift in Sources */,
