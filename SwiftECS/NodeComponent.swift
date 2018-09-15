@@ -30,6 +30,14 @@ public struct EntityNode<NodeType: KitNode> {
 		list.update(entity: self.entity, component: component)
 		return self
 	}
+
+	@discardableResult
+	public func tag<TagContainerType: EntityTagContainer>(
+		_ list: TagContainerType,
+		_ tag: TagContainerType.TagType) -> EntityNode<NodeType> {
+		list.add(tag: tag, toEntity: self.entity)
+		return self
+	}
 }
 
 public extension EntityBuilder {

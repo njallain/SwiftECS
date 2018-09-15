@@ -43,5 +43,26 @@ public extension Entity {
 		}
 		return (component1, component2, component3)
 	}
+	func get<
+		ComponentListType1: ComponentContainer,
+		ComponentListType2: ComponentContainer,
+		ComponentListType3: ComponentContainer,
+		ComponentListType4: ComponentContainer>(
+		components list1: ComponentListType1,
+		_ list2: ComponentListType2,
+		_ list3: ComponentListType3,
+		_ list4: ComponentListType4)
+		-> (ComponentListType1.ComponentType,
+			ComponentListType2.ComponentType,
+			ComponentListType3.ComponentType,
+			ComponentListType4.ComponentType)? {
+		guard let component1 = list1.get(entity: self),
+			let component2 = list2.get(entity: self),
+			let component3 = list3.get(entity: self),
+			let component4 = list4.get(entity: self)  else {
+			return nil
+		}
+		return (component1, component2, component3, component4)
+	}
 	// swiftlint:enable large_tuple
 }

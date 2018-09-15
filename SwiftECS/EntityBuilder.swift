@@ -85,6 +85,14 @@ public extension Entity {
 		list.update(entity: self, component: component)
 		return self
 	}
+
+	@discardableResult
+	func tag<TagContainerType: EntityTagContainer>(
+		_ list: TagContainerType,
+		_ tag: TagContainerType.TagType) -> Entity {
+		list.add(tag: tag, toEntity: self)
+		return self
+	}
 }
 
 /**
